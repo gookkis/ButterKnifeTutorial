@@ -14,15 +14,19 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+    //inisialisasi TextView
     @Bind(R.id.tv_butterknife)
     TextView textViewButterKnife;
 
+    //inisialisasi Button
     @Bind(R.id.button_butterknife)
     Button btnButterKnife;
 
+    //inisialisasi ImageView
     @Bind(R.id.iv_butterknife)
     ImageView imageViewButterKnife;
 
+    //Binding resource Drawable
     @BindDrawable(R.drawable.gookkis)
     Drawable gookkisLogo;
 
@@ -31,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Instance Libray ButterKnife
         ButterKnife.bind(this);
 
     }
 
+    //OnClik method dari button Butter Knife
     @OnClick(R.id.button_butterknife)
     public void btnClicked() {
         textViewButterKnife.setText(R.string.btn_clicked_info);
